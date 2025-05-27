@@ -1,0 +1,154 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  overflow-x: hidden;
+}
+
+/* header */
+.header_container {
+  width: 100%;
+  height: 682px;
+  position: relative;
+}
+
+.header {
+  width: 90%;
+  height: 41px;
+  padding: 20px 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+}
+
+.logo img {
+  width: 95px;
+  height: 30px;
+  z-index: 1;
+}
+
+.profile img {
+  width: 32px;
+  height: 32px;
+  z-index: 1;
+  border-radius: 3px;
+}
+
+/* advertisement */
+.ad_container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 0;
+}
+
+.ad_container > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ad_text {
+  position: absolute;
+  top: 40%;
+  left: 50px;
+  width: 40%;
+}
+
+.ad_text > img {
+  width: 40%;
+  object-fit: cover;
+}
+
+.ad_text > p {
+  color: #fff;
+  font-size: clamp(10px, 2vw, 16px);
+  font-weight: 500;
+}
+
+.ad_btn > button {
+  width: 100px;
+  height: 40px;
+  border: none;
+  border-radius: 3px;
+  background-color: #fff;
+  color: #000;
+  font-size: 16px;
+  font-weight: 500;
+  margin-right: 8px;
+}
+
+.ad_btn > button:nth-child(2) {
+  width: 130px;
+  background-color: #6d6d6eb3;
+  color: #fff;
+  cursor: pointer;
+}
+
+.ad_btn > button:hover {
+  opacity: 0.5;
+}
+
+/* content */
+.content_container {
+  width: 100%;
+  position: relative;
+  margin-top: -100px;
+  background-color: #000;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 0.9) 85%,
+    rgba(0, 0, 0, 0)
+  );
+  padding: 50px 0;
+}
+
+.content {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.content > div {
+  margin: 0 50px;
+  padding-top: 20px;
+  display: block;
+}
+
+/* content 제목 */
+.content_text {
+  color: #fff;
+  font-size: 20px;
+  margin: 20px 0;
+}
+
+/* flex로 list 정렬 */
+.content_list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 8px;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+ul > li > a > img {
+  width: 214px;
+  height: 120px;
+  object-fit: cover;
+}
+
+/* content img에 마우스 올리면 이미지 커짐 */
+ul > li > a > img:hover {
+  transform: scale(1.5);
+  transition: transform 0.3s ease;
+}
